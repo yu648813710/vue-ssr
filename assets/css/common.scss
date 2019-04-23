@@ -1,0 +1,78 @@
+/*
+ * @Author: YuWen.tao 
+ * @Date: 2019-04-16 10:55:45 
+ * @Last Modified by: YuWen.tao
+ * @Last Modified time: 2019-04-23 11:33:41
+ */
+
+ $main_color: #589802;
+ $white_color: #fff;
+ 
+ * {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+ 
+ body {
+   padding: 0;
+   margin: 0;
+   display: none;
+   min-height: 80vh;
+   font-size:0.14rem;
+ }
+ a{
+   color:#333;
+   text-decoration: none;
+ }
+ .none {
+   display: none;
+ }
+ .fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+/* 路由过渡效果 */ 
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+/* 路由过渡效果 */
+/* 间隔 start */
+.new_interval_box{
+    height: 0.1rem;
+    width: 100%;
+    background: #f8f8f8;
+}
+/* 间隔 end */  
+/* 图片广告开始 */
+
+.exhibition_banner {
+  width: 100%;
+  height: 0.7rem;
+  overflow: hidden;
+  position: relative;
+  img {
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+  }
+}
+
+.exhibition_banner_nr {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  color: #d0d0d0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.02rem 0.05rem;
+  font-size: 0.1rem;
+  border-radius: 0.02rem;
+}
+
+/* 图片广告结尾 */
