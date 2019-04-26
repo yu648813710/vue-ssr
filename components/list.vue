@@ -1,7 +1,7 @@
 <template>
   <div class="center">
     <template v-if="listData">
-      <div v-for="(val,index) in listData" :key="index+'list'" class="house-details">
+      <div v-for="(val,index) in listData" :key="index+'list'" class="house-details" :id="val.id">
         <div class="fl">
           <a href>
             <img :src="val.img" alt="楼盘照片">

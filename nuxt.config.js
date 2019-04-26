@@ -10,7 +10,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'keywords', content: '西安房产网，西安新房楼盘，西安优质新房，西安新房在售，西安房价，西安买房网' },
+      { hid: 'description', name: 'description', content: '房源网为客户提供新房信息。包括西安新房最新动态、楼市政策、新闻、买优质新房就上房源网' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

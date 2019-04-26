@@ -2,7 +2,7 @@
  * @Author: YuWen.tao 
  * @Date: 2019-04-19 16:36:20 
  * @Last Modified by: YuWen.tao
- * @Last Modified time: 2019-04-23 14:42:15
+ * @Last Modified time: 2019-04-25 10:38:01
  */
 import Mock from 'mockjs'
 export default {
@@ -60,13 +60,13 @@ export default {
             data.indexNav.push(objData);//导航
 
             objDataB.img=randomData.image("80x80", "#589802");
+            objDataB.id=randomData.integer(1,100);
             objDataB.title=randomData.cword(5,10);
             objDataB.site=randomData.cword(10,15);
             objDataB.sign=randomData.cword(2,4);
             objDataB.price=randomData.increment(10000);
             data.houseList.push(objDataB);//猜你喜欢
 
-            
         };
   
         //好盘推荐与独家策划与二级导航处理

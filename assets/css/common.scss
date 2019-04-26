@@ -2,7 +2,7 @@
  * @Author: YuWen.tao 
  * @Date: 2019-04-16 10:55:45 
  * @Last Modified by: YuWen.tao
- * @Last Modified time: 2019-04-23 11:33:41
+ * @Last Modified time: 2019-04-26 15:24:36
  */
 
  $main_color: #589802;
@@ -29,11 +29,22 @@
    display: none;
  }
  .fl {
+   
   float: left;
 }
 
 .fr {
   float: right;
+}
+.houseList-box {
+  width: 95%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 2.5%;
+}
+.box_hidden {
+  height: 100%;
+  overflow: hidden;
 }
 /* 路由过渡效果 */ 
 .page-enter-active, .page-leave-active {
@@ -50,29 +61,17 @@
     background: #f8f8f8;
 }
 /* 间隔 end */  
-/* 图片广告开始 */
 
-.exhibition_banner {
-  width: 100%;
-  height: 0.7rem;
-  overflow: hidden;
-  position: relative;
-  img {
-    display: block;
-    width: 100%;
-    height: 0.7rem;
+/* swiper 在本页面中无法修改分页器样式 */ 
+.index_banner ul.swiper-pagination {
+  span {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  span.swiper-pagination-bullet-active {
+    background: #fff;
   }
 }
-
-.exhibition_banner_nr {
-  position: absolute;
-  right: 2%;
-  top: 5%;
-  color: #d0d0d0;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.02rem 0.05rem;
-  font-size: 0.1rem;
-  border-radius: 0.02rem;
+/* swiper 在本页面中无法修改分页器样式 */ 
+.houseList-mt {
+  margin-top: 0.44rem;
 }
-
-/* 图片广告结尾 */

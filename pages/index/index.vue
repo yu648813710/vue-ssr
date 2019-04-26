@@ -107,10 +107,7 @@
     <div class="new_interval_box"></div>
     <!-- 间隔 end -->
     <!-- 广告 start -->
-    <div class="exhibition_banner" v-for="(val,index) in pageData.minBanner" :key="index+'ban'">
-      <img :src="val.img" alt>
-      <span class="exhibition_banner_nr">广告</span>
-    </div>
+    <abvertising :abvertisingData="pageData.minBanner"></abvertising>
     <!-- 广告 end -->
     <!-- 间隔 statr -->
     <div class="new_interval_box"></div>
@@ -169,7 +166,7 @@ import axios from 'axios' //请求插件
 import Swiper from 'swiper' //请求插件
 import ListHouse from '~~/components/list' //列表组件
 import store from '~~/store/store'
-
+import abvertising from '~~/components/advertising' //广告组件
 export default {
   store,
   data() {
@@ -183,14 +180,16 @@ export default {
   },
   components: {
     ListHouse,
+    abvertising
   },
   methods: {
     requestIndexData() {
       let that = this
       mock.mocks()
-      if (that.requestOver) {//判断是否有请求进行
-        that.requestOver = !that.requestOver//加锁
-        that.$store.dispatch('setRequestState',that.requestOver);
+      if (that.requestOver) {
+        //判断是否有请求进行
+        that.requestOver = !that.requestOver //加锁
+        that.$store.dispatch('setRequestState', that.requestOver)
         axios({
           method: 'get',
           url: 'house/index.json'
@@ -200,12 +199,12 @@ export default {
             that.pageNews = res.data.indexNews //处理新闻
             that.indexBanner() //首页banner
             that.requestOver = !that.requestOver
-        that.$store.dispatch('setRequestState',that.requestOver);
+            that.$store.dispatch('setRequestState', that.requestOver)
           })
           .catch(function(err) {
             that.requestOver = !that.requestOver
             console.log(err)
-        that.$store.dispatch('setRequestState',that.requestOver);
+            that.$store.dispatch('setRequestState', that.requestOver)
           })
       }
     },
@@ -232,6 +231,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~~/assets/css/index.scss';
+@import './index.scss';
 </style>
 

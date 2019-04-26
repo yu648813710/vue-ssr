@@ -2,12 +2,12 @@
  * @Author: YuWen.tao 
  * @Date: 2019-04-23 15:55:26 
  * @Last Modified by: YuWen.tao
- * @Last Modified time: 2019-04-23 18:12:15
+ * @Last Modified time: 2019-04-24 16:47:30
  */
 import Vue from "vue"//引入
 import Vuex from 'vuex'//引入
 Vue.use(Vuex);//使用
-const stores = new Vuex.Store({
+const store = new Vuex.Store({
     //状态树
     state:{
         requestOver:true,
@@ -30,4 +30,5 @@ const stores = new Vuex.Store({
         }
     }
 });
+let stores=()=>store;//需要每次 import 得时候 return 出一个新的对象，不然会有错误提示
 export default stores;//出口 

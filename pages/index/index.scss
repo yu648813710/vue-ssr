@@ -1,8 +1,8 @@
 /*
  * @Author: YuWen.tao 
  * @Date: 2019-04-23 14:55:44 
- * @Last Modified by:   YuWen.tao 
- * @Last Modified time: 2019-04-23 14:55:44 
+ * @Last Modified by: YuWen.tao
+ * @Last Modified time: 2019-04-24 14:15:32
  */
  @import '../../assets/css/common';
  /* 首页搜索开始 */
@@ -122,7 +122,7 @@
        }
      }
    }
-   .swiper-pagination {
+   ul.swiper-pagination {
      span {
        background: rgba(255, 255, 255, 0.6);
      }

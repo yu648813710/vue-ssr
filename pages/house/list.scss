@@ -1,0 +1,343 @@
+/*
+ * @Author: YuWen.tao 
+ * @Date: 2019-04-25 15:28:27 
+ * @Last Modified by: YuWen.tao
+ * @Last Modified time: 2019-04-25 15:39:02
+ */
+/* 搜索板块开始 */
+
+.houseList_search {
+  height: 0.35rem;
+  padding: 0.05rem 3% 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.houseList_searchl {
+  width: 79%;
+  height: 0.24rem;
+  line-height: 0.24rem;
+  float: left;
+  background: #f8f8f8;
+  border-radius: 0.25rem;
+  padding: 0.08rem 0 0.08rem 0.15rem;
+  color: #666;
+  font-size: 0.14rem;
+
+  input {
+    border: 0;
+    background: none;
+    width: 79%;
+    height: 0.24rem;
+    line-height: 0.24rem;
+  }
+
+  img {
+    width: 0.2rem;
+    float: left;
+  }
+
+  button {
+    display: block;
+    background: #fff;
+    border: none;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-left: 0.1rem;
+  }
+
+  span {
+    float: left;
+    margin-left: 0.05rem;
+    font-size: 0.14rem;
+  }
+}
+
+.houseList_searchr {
+  float: right;
+  text-align: center;
+  font-size: 0.12rem;
+  color: #666;
+
+  img {
+    width: 0.17rem;
+    margin-bottom: 0.03rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.houseList_sear {
+  width: 15%;
+  display: block;
+  text-align: center;
+  font-size: 0.16rem;
+  color: #333;
+  height: 0.36rem;
+  line-height: 0.36rem;
+}
+/* 搜索结尾 */
+/* 页面搜索start */
+
+.houseList_sele_on {
+  font-size: 0.13rem;
+  background: #fff;
+  padding: 0.1rem 3%;
+  line-height: 0.3rem;
+  color: #666;
+
+  li {
+    width: 96%;
+    padding: 0 2%;
+    height: 0.32rem;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0 0.08rem;
+    }
+
+    .active {
+      color: #589802;
+    }
+  }
+
+  .houseList_sele_li01 {
+    span {
+      padding: 0 0.04rem;
+      color: #777;
+      font-size: 0.14rem;
+    }
+
+    .active {
+      color: #589802;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 0.05rem;
+    right: 0.04rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    border: solid #ababab;
+    border-width: 0.01rem 0.01rem 0 0;
+    -webkit-transform: translate(0, 50%) rotate(45deg);
+    transform: translate(0, 50%) rotate(45deg);
+  }
+}
+
+.houseList-select li.active {
+  i {
+    border-top: 0.04rem solid #589802;
+  }
+
+  span {
+    color: #589802;
+  }
+}
+/* 筛选展开结尾 */
+/* 楼盘筛选 */
+
+.houseList-screen {
+  width: 100%;
+  height: 0.42rem;
+  background-color: #fff;
+  font-size: 0.14rem;
+  line-height: 0.42rem;
+  color: #333;
+  overflow: hidden;
+
+  &.fixed_box {
+    position: fixed;
+    left: 0;
+    top: 0.44rem;
+    z-index: 1000;
+  }
+}
+
+.houseList-screen .houseList-select li {
+  width: 1%;
+  display: table-cell;
+  text-align: center;
+  position: relative;
+}
+
+.houseList-screen.houseList-line {
+  border: 0.01rem solid #eaeaea;
+}
+
+.houseList-screen ul span {
+  color: #666;
+  font-size: 0.14rem;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.houseList-screen ul li i {
+  border: 0.04rem solid transparent;
+  border-top: 0.04rem solid #6e6e6e;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 49%;
+  right: 19%;
+}
+
+.houseList-screen ul li.active_nav i {
+  border-top: 0.05rem solid #589802;
+  border-bottom: none;
+  bottom: 56%;
+  right: 19%;
+}
+
+.houseList-screen ul .active_nav span {
+  color: #589802;
+}
+
+/*楼盘筛选 E*/
+/*筛选页面开始*/
+
+.popup-window {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+}
+
+.screen_pop_box {
+  width: 100%;
+  background-color: #fff;
+  height: 3rem;
+  overflow: auto;
+  font-size: 0.12rem;
+  color: #3c3f46;
+
+  a {
+    color: #3c3f46;
+  }
+
+  ul.screen_centont {
+    height: auto;
+    overflow-y: auto;
+
+    li.screen_type {
+      overflow: hidden;
+      height: auto;
+      .item_title {
+        width: 50%;
+      }
+      div.title {
+        line-height: 0.3rem;
+        font-size: 0.14rem;
+      }
+
+      div.screen_tab span.active {
+        color: #62ab00;
+      }
+      .item_center {
+        width: 49%;
+        border-left: 0.01rem solid #f1f1f1;
+        background: #f9f9f9;
+        height: 3rem;
+        overflow: hidden;
+        .item {
+          height: 3rem;
+          overflow: auto;
+        }
+      }
+    }
+
+    li.screen_more {
+      width: 94%;
+      margin: 0 3%;
+
+      div.screen_tab {
+        span.active {
+          background-color: #f6fde4;
+          color: #589802;
+          border: none;
+        }
+
+        span {
+          padding: 0.04rem 0.09rem;
+          border-radius: 0.02rem;
+          background: #f8f8f8;
+          margin: 0.05rem 0.05rem 0.05rem 0;
+          font-size: 0.12rem;
+          display: inline-block;
+          color: #999;
+        }
+      }
+
+      div.price_input span {
+        margin: 0 0.1rem;
+      }
+    }
+  }
+}
+
+.screen_pop {
+  div.true_but {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: #f8f8f8;
+    font-size: 0.16rem;
+    border-top: 0.01rem solid #eaeaea;
+    button {
+      background-color: #589802;
+      border-radius: 0.05rem;
+      border: 0;
+      width: 90%;
+      margin: 0.1rem;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      color: #fff;
+    }
+  }
+}
+
+
+.screen_location {
+  width: 100%;
+  color: #666;
+  font-size: 0.12rem;
+  margin-top: 0.1rem;
+  span {
+    padding-right: 0.1rem;
+  }
+  a {
+    padding-right: 0.1rem;
+    color: #589802;
+  }
+}
+
+ul.screen_centont li.screen_type .item_title p,
+ul.screen_centont li.screen_type .item_center span,
+ul.screen_centont li.screen_house div.screen_tab span,
+ul.screen_centont li.screen_price div.screen_tab span {
+  width: 94%;
+  margin: 0 3%;
+  line-height: 0.46rem;
+  text-align: center;
+  display: block;
+  border-bottom: 0.01rem solid #f1f1f1;
+}
+
+li.screen_type .item_title p.active,
+li.screen_type .item_center span.active {
+  color: #589802;
+}
+
+/*筛选页面结束*/

@@ -13,7 +13,7 @@ import Navbox from '~/components/nav'
 import shodwPage from '~~/components/shodwPage' //加载组件
 import store from '~~/store/store'
 export default {
-  store,
+  store,//使用
   middleware: 'auth', //中间件使用
   data() {
     return {
@@ -24,6 +24,7 @@ export default {
     shodwPage
   },
   computed:{
+    //这块直接调用store里的状态，然后页面每次加载的时候改变状态从而产生遮罩
       requestB() {
         return  this.$store.state.requestOver
       },
