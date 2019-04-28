@@ -442,6 +442,7 @@ export default {
     //筛选请求数据
     screenList() {
       this.listData = [] //列表数据清空
+      this.dataNum=0//列表计数为0
       this.requestList()//下拉请求数据
     },
     //筛选框确定请求
